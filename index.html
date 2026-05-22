@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <div class="card">
+      <div class="header">
+        <div>
+          <h1>My Tasks</h1>
+          <p class="subtitle" id="subtitle">0 tasks remaining</p>
+        </div>
+        <div class="date-badge" id="dateBadge"></div>
+      </div>
+
+      <div class="input-row">
+        <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="80"/>
+        <button onclick="addTask()">+</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" onclick="setFilter('all', this)">All</button>
+        <button class="filter" onclick="setFilter('active', this)">Active</button>
+        <button class="filter" onclick="setFilter('done', this)">Done</button>
+      </div>
+
+      <ul class="task-list" id="taskList"></ul>
+
+      <div class="footer-row">
+        <span id="footerCount">0 left</span>
+        <button class="clear-btn" onclick="clearDone()">Clear Completed</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
